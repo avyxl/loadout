@@ -1148,6 +1148,21 @@
         renderCompanyTabs();
         renderCatalog();
         animateBg();
+        
+    <!-- MINI MUSIC PLAYER WIDGET -->
+    <div id="mini-player" style="position: fixed; bottom: 20px; right: 20px; background: rgba(15, 15, 15, 0.9); color: #ffffff; padding: 10px 14px; border-radius: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); font-family: var(--font-code); z-index: 9999; border: 1px solid var(--card-border); backdrop-filter: blur(12px);">
+        <button id="play-btn" onclick="togglePlay()" style="background: #ffffff; border: none; color: #000000; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">▶</button>
+        
+        <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 12px; font-weight: 600; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #ffffff;">loadout.mp3</span>
+            <span id="player-status" style="font-size: 10px; color: var(--text-dim);">click to play</span>
+        </div>
+
+        <button id="mute-btn" onclick="toggleMute()" style="background: transparent; border: none; color: var(--text-dim); cursor: pointer; font-size: 15px; padding: 4px;">🔊</button>
+        
+<audio id="audio-element" loop preload="auto" src="./song.mp3"></audio>
+        
+    </div>
     </script>
 </body>
 </html>
